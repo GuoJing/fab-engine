@@ -45,4 +45,5 @@ Deploy
 ----
 
 nginx: make sure your nginx support stream response.
+
 gunicorn: make sure your gunicorn support stream response or use `-k eventlet --graceful-timeout 600 --timeout 600` paras.
