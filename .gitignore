@@ -1,0 +1,31 @@
+# py
+*.pyc
+*~
+# editor
+*.sw[opnlm]
+
+.DS_Store
+
+# in develpo
+venv/
+node_modules/
+local_config.py
+jupiter/static
+jupiter/templates
+tmp
+.env
+
+# report
+report/
+
+*.rdb
+*.dump
+couchdb.stderr
+couchdb.stdout
+snapshot
+stdin
+stdout
+*#
+!fab/run
+fab/*
+app.cfg

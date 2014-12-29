@@ -1,0 +1,8 @@
+Flask==0.10.1
+Flask-Mako==0.3
+Flask-Script==2.0.5
+gunicorn==19.1.1
+fabric==1.10.1
+python-envcfg==0.1.0
+shelljob==0.4.4
+eventlet==0.15.2

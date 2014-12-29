@@ -1,0 +1,198 @@
+.total-form {padding-bottom: 90px;}
+.input-group {margin-bottom: 30px}
+.area {width:100%; border: 1px solid #ccc; border-radius:4px; height: 300px}
+.num {margin: 10px 0 20px 0}
+.select {border: 1px solid #ccc; height: padding: 5px}
+
+.fullscreen-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1100;
+  padding: 20px 20px;
+}
+
+.btn-fullscreen {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  padding: 3px;
+  color: #aaa;
+  font-size: 18px;
+  transition: all 0.1s;
+}
+
+.btn-fullscreen:hover {
+  color: #333;
+  -webkit-transform: scale(1.1)
+}
+
+.btn-full-exit {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  color: #aaa;
+  font-size: 20px;
+  transition: all 0.1s;
+}
+.btn-full-exit:hover {
+  color: #333;
+  -webkit-transform: scale(1.1)
+}
+
+.full-edit-col {
+  padding: 0 20px;
+  overflow: scroll;
+}
+.textarea-con {
+  border-right: 1px solid #ccc;
+  padding: 0;
+  position: relative;
+}
+
+#markdown-text {
+  padding: 20px;
+}
+#markdown-text-shadow {
+  outline: none;
+  border: none;
+  resize: none;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+}
+.noscroll {
+  overflow: hidden;
+}
+
+.edit-btn-con {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.edit-btn-con span {
+  font-size: 16px;
+  width: 35px;
+  padding: 2px 0;
+}
+
+.edit-btn-con .image-pop {
+  width: 230px;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+  background: #eee;
+  min-height: 50px;
+}
+
+.image-pop .img-close{
+  float: right;
+  width: 20px;
+  height: 20px;
+  line-height: 14px;
+  background: #777;
+  border-radius: 3px;
+  padding: 2px 2px 2px 5px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.image-pop .img-close:hover {
+  background: #888;
+}
+
+.image-pop .test-upload {
+  padding-bottom: 10px;
+}
+.image-pop .test-upload a {
+  text-decoration: none;
+}
+.image-pop .btn_addPic{
+  display: inline-block;
+  position: relative;
+  height: 39px;
+  overflow: hidden;
+  padding: 0 30px;
+  border: 1px solid #EBEBEB;
+  background: none repeat scroll 0 0 #fff;
+  color: #777;
+  font: 14px/39px 'MicroSoft Yahei','Simhei';
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.image-pop .btn_addPic i {
+  color: #3Ba0bE;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+.image-pop .btn_addPic:hover i{
+  color: #5BC0DE;
+}
+.image-pop .uploadimg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 39px;
+  cursor: pointer;
+  opacity: 0;
+  filter:alpha(opacity: 0);
+}
+
+.image-pop .img-prompt {
+  margin: -10px 0 10px 0;
+  color: red;
+}
+
+.image-pop .img-occupy {
+  height: 100px;
+  line-height: 100px;
+  background: #aaa;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.image-pop .img-preview {
+  max-width: 100%;
+  display: none;
+}
+
+.image-pop .img-btn {
+  width: 100px;
+  display: none;
+  margin-top: 15px;
+}
+
+#preview img{
+  max-width: 100%;
+  display: block;
+}
+
+.btn-publish {
+  margin-top: 10px;
+}
+
+.input-date {
+  border: 1px solid #aaa;
+  margin-left: 10px;
+  height: 20px;
+  width: 90px;
+  background: #f8f8f8;
+}
+
+.hour-break {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 5px;
+}

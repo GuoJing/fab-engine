@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${self.title()}</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/sb-admin.css" rel="stylesheet">
+    ${self.css_file()}
+    <style>
+      a {color: #7F8C8D;}
+      a:hover {text-decoration:none}
+      #page-wrapper {min-height: 500px; margin-bottom: 30px}
+      ${self.css()}
+    </style>
+
+    <script src="/static/js/jquery-1.10.2.js"></script>
+
+    <script>
+    ${self.script()}
+    </script>
+  </head>
+
+  <body>
+    ${self.content()}
+
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.metisMenu.js"></script>
+    <script src="/static/js/sb-admin.js"></script>
+    <script src="/static/js/markdown.min.js"></script>
+    ${self.js()}
+  </body>
+</html>
+
+<%def name="content()">
+  <div id="wrapper">
+    <%include file="mods/nav.html" />
+    ${self.main()}
+  </div>
+</%def>
+
+<%def name="title()"></%def>
+<%def name="main()"></%def>
+<%def name="sidebar()"></%def>
+<%def name="js()"></%def>
+<%def name="css()"></%def>
+<%def name="css_file()"></%def>
+<%def name="script()"></%def>

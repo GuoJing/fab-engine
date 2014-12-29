@@ -1,0 +1,51 @@
+<%inherit file="/base.html" />
+
+<%def name="main()">
+
+<div id="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">running <span id="fabdir">${fabdir}</span>/<span id="fabfile">${fabfile}</span>.py</h1>
+      <h6>This will Popen fabs/${fabdir}/${fabfile}.py and wait for response.</h6>
+      <div id="terminal"></div>
+      <span id="run" class="btn-primary btn">Run</span>
+  </div>
+</div>
+</%def>
+
+<%def name="script()">
+$(document).ready(function(){
+
+  if(typeof(EventSource)!=="undefined") {
+    $("#terminal").html("");
+  } else {
+    $("#terminal").html=("sorry, your browser does not support event source");
+  }
+
+  $("#run").click(function(){
+    $("#terminal").html("");
+    $("#run").attr("class", "btn btn-warning");
+    $("#run").html("Running");
+    var fabdir = $("#fabdir").html();
+    var fabfile = $("#fabfile").html();
+    var source = new EventSource("/fab/msg/" + fabdir + "/" + fabfile);
+
+    source.onmessage=function(event) {
+      if(event.data!=''){
+          document.getElementById("terminal").innerHTML += event.data + "<br>";
+      }
+      if(event.data=='done'){
+        source.close();
+        $("#run").attr("class", "btn btn-success");
+        $("#run").html("Done");
+      }
+      $('#terminal').scrollTop($('#terminal')[0].scrollHeight);
+    }
+  });
+
+});
+</%def>
+
+<%def name="css()">
+#terminal {padding: 20px; background: black; color: white; margin-bottom: 20px; overflow:scroll;overflow-x:hidden;max-height:400px;}
+</%def>
